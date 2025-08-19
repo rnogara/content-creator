@@ -3,13 +3,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  
+  .font-protest-revolution {
+    font-family: var(--font-protest-revolution), cursive;
+  }
+  
+  .font-yatra-one {
+    font-family: var(--font-yatra-one), sans-serif;
+  }
+  
+  .font-merienda {
+    font-family: var(--font-merienda), cursive;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +40,4 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

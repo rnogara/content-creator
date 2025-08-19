@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Merienda, Protest_Revolution, Yatra_One } from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const protestRevolution = Protest_Revolution({
+  weight: "400",
   subsets: ["latin"],
+  variable: '--font-protest-revolution',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const yatraOne = Yatra_One({
+  weight: "400",
   subsets: ["latin"],
+  variable: '--font-yatra-one',
+});
+
+const merienda = Merienda({
+  subsets: ["latin"],
+  variable: '--font-merienda',
 });
 
 export const metadata: Metadata = {
@@ -23,10 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${protestRevolution.variable} ${yatraOne.variable} ${merienda.variable}`}>
+      <body className="font-sans">
         {children}
       </body>
     </html>

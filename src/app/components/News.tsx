@@ -10,8 +10,6 @@ const News = () => {
     },
     {
       name: 'Twitch',
-      watched: '1000',
-      likes: '1000',
     },
     {
       name: 'Instagram',
@@ -26,7 +24,7 @@ const News = () => {
   ];
 
   return (
-    <div className="relative p-24">
+    <div className="w-full p-24">
       <h2 className="text-[4rem] font-bold font-protest-revolution text-center">Novidades</h2>
       <div className="relative grid grid-cols-4 gap-4 pt-10">
         {socialMediaData.map((social) => (

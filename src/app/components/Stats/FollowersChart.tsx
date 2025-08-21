@@ -1,6 +1,6 @@
 "use client";
 
-import { followersChartData } from "./Stats";
+import { followersChartData } from ".";
 import {
 	Bar,
 	BarChart,

@@ -1,19 +1,18 @@
 import Background from "./components/Background";
+import Contact from "./components/Contact";
 import HomeComponent from "./components/HomeComponent";
 import News from "./components/News";
 import Stats from "./components/Stats";
-import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <main className="w-full font-merienda text-amber-200">
-      <Background />
-      <div className="relative">
+    <Background>
+      <main className="relative z-10">
         <HomeComponent />
         <News />
         <Stats />
         <Contact />
-      </div>
-    </main>
+      </main>
+    </Background>
   );
 }

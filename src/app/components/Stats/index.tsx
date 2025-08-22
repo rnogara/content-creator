@@ -1,3 +1,4 @@
+import Section from "../Section"
 import FollowersChart from "./FollowersChart"
 
 export const followersChartData = [
@@ -25,18 +26,20 @@ export const followersChartData = [
 
 const Stats = () => {
   return (
-    <div className="w-full p-24">
-      <h2 className="text-[4rem] font-bold font-protest-revolution text-center">Seguidores</h2>
-      <div className="flex items-center justify-evenly mt-10">
-        <FollowersChart />
-        <div className="flex flex-col items-center font-bold font-yatra-one text-amber-300">
-          <h3 className="text-[5rem]">Total</h3>
-          <p className="text-[3rem]">
-            {followersChartData.reduce((total, item) => total + item.followers, 0).toLocaleString()}
-          </p>
+    <Section>
+      <div className="w-full p-24">
+        <h2 className="text-[4rem] font-bold font-protest-revolution text-center">Seguidores</h2>
+        <div className="flex items-center justify-evenly mt-10">
+          <FollowersChart />
+          <div className="flex flex-col items-center font-bold font-yatra-one text-amber-300">
+            <h3 className="text-[5rem]">Total</h3>
+            <p className="text-[3rem]">
+              {followersChartData.reduce((total, item) => total + item.followers, 0).toLocaleString()}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </Section>
   )
 }
 
